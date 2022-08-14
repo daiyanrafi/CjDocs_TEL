@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="../assets/images/favicon.png" rel="icon" />
+<title>GitHub | CJDocs</title>
+<meta name="description" content="Transcom Electronics Lts">
+<meta name="author" content="druvo.net">
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="../assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="../assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="../assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".CJDocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a class="logo ml-md-3" href="index.html" title="CJDocs Template"> <img style="height: 65px;" src="../assets/images/logo.png" alt="CJDocs Template"/> </a> 
+		<span class="text-2 ml-2">v1.0</span> 
+        <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Support</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Khondokar Ali Ifran</a></li>
+                <li><a class="dropdown-item" href="#">Zahid Hasan</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div class="CJDocs-navigation bg-light">
+      <ul class="nav flex-column ">
+        <li class="nav-item"><a class="nav-link active" href="#CJDocs_start">Getting Started</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#CJDocs_github">GitHub</a>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#git_status">status</a></li>
+                <li class="nav-item"><a class="nav-link" href="#git_add">ADD</a></li>
+                <li class="nav-item"><a class="nav-link" href="#git_commit">Commit</a></li>
+                <li class="nav-item"><a class="nav-link" href="#git_pull">Pull</a></li>
+                <li class="nav-item"><a class="nav-link" href="#git_push">Push</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+		<li class="nav-item"><a class="nav-link" href="#CJDocs_changelog">Changelog</a>
+
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+        <li class="nav-item"><a class="nav-link" href="GItHubDoc/">Full Version</a></li>
+
+      </ul>
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div class="CJDocs-content">
+      <div class="container"> 
+        <!-- Getting Started
+		============================ -->
+        <section id="CJDocs_start" class="pt-2">
+        <h2>TEL + GitHub</h2>
+        <p class="lead">Visit our official <a class="ml-1" target="_blank" href="https://github.com/Transcom-Electronics-Ltd/"><i class="fas fa-external-link-alt"></i> GitHub organization</a></p>
+        <hr>
+        <div class="row">
+
+          <h3>GitHub Using the Command Line</h3>
+
+            <ol>
+              <li id="git_status">
+                To check which files are changed in your local repository:
+                <pre><code class="git">git status</code></pre>
+              </li>
+            
+              <li id="git_add">Now you can add the files to the local git for future commit. To add all files, use:
+              <pre><code class="git">git add .</code></pre>
+              or 
+              <pre><code class="git">git add --all</code></pre>
+              To add special file use: 
+              <pre><code class="git">git add file_name</code></pre>
+            </li>
+            <li id="git_commit">
+              The next step is to package the files into a commit. You do this with the following command: 
+              <pre><code class="git">git commit -m "your_message"</code></pre>
+              The message at the end of the commit command should explain what the commit contains. For example, you can say "My first commit" or "Fixing bug in the display_image() function" etc.
+            </li>
+            <li id="git_pull">
+              Next you can check for any changes in the github repository from your teammates:
+              <pre><code class="git">git pull</code></pre>
+            </li>
+            <li id="git_push">	Finally, you need to push the code from your local computer to the remote repository on GitHub:
+              <pre><code class="git">git push</code></pre>
+            This command will push the changes to the remote repository.
+          </li>
+          </ol>
+            
+        </div>
+        </section>
+
+		
+        <!-- Changelog
+		============================ -->
+		
+        <section id="CJDocs_changelog">
+    		  <hr class="divider">
+          <h3 id="v1-0">Version 1.0 <small class="text-muted">(21 March, 2022)</small></h3>
+          <p>Initial Release</p>
+        </section>        
+        
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="d-flex justify-content-center mb-3">
+        <img src="../assets/images/logo.png" height="100px">
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a href="http://www.druvo.net/CJDocs-one-page-documentation-html-template/">CJDocs</a>. All Rights Reserved.</p>
+	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.druvo.net/">druvo</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="../assets/vendor/jquery/jquery.min.js"></script> 
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="../assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>

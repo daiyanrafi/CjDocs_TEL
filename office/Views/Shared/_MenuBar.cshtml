@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor	
+<div class="CJDocs-navigation bg-light">
+      <ul class="nav flex-column ">
+        <li class="nav-item"><a class="nav-link active" href="#CJDocs_start">Getting Started</a>
+          <ul class="nav flex-column main-menu">
+              <script src="~/js/jquery.min.js"></script> 
+
+              <script>
+                   
+                    
+                    $(document).ready(function() {
+                        var datas =  @Html.Raw(Accessor.HttpContext.Session.GetString("_Menu"));
+                        $.each(datas, function(index, data) {
+                            var item = "<li class='nav-item'><a class='nav-link' href='"+data.Url+"'> " +data.Name+ "</a></li>"
+                            $(".main-menu").append(item);
+
+                        });
+
+                    });
+              </script>
+            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+@*            <li class="nav-item"><a class="nav-link" href="GitHub/">GitHub</a></li>
+            <li class="nav-item"><a class="nav-link" href="#CJDocs_portal">CJ.Portal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#CJDocs_api">CJ.API</a></li>
+            <li class="nav-item"><a class="nav-link" href="#CJDocs_win">CJ.Win</a></li>*@
+            
+            <li class="nav-item"><a class="nav-link " asp-area="" asp-controller="Doc" asp-action="Index">Docs</a></li>
+        </li>
+		<li class="nav-item"><a class="nav-link" href="#CJDocs_changelog">Changelog</a>
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+      </ul>
+    </div>

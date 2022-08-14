@@ -1,0 +1,57 @@
+﻿@model Doc
+@{
+    ViewData["Title"] = "Create";
+}
+<form method="post"> 
+
+	<br /><br />
+	<div class="border" p-3 mt-4>
+		<div class="row pb-2">
+			<h2 class="text-primary">Create Doc</h2>
+			<hr />
+		</div>
+
+		@*<div  asp-validation-summary="All"></div>*@
+
+		<div class="mb-3">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Url"></label>
+			<input asp-for="Url" class="form-control" />
+			<span asp-validation-for="Url" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Tittle"></label>
+			<input asp-for="Tittle" class="form-control" />
+			<span asp-validation-for="Tittle" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description"></label>
+			<input asp-for="Description" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Section"></label>
+			<input asp-for="Section" class="form-control" />
+			<span asp-validation-for="Section" class="text-danger"></span>
+		</div>
+		@*<div class="mb-3">
+			<label asp-for="CreateDateTime"></label>
+			<input asp-for="CreateDateTime" class="form-control" />
+			<span asp-validation-for="CreateDateTime" class="text-danger"></span>
+		</div>*@
+
+		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<a asp-controller="Doc" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+		<partial name="_ValidationScriptsPartial" />
+
+
+

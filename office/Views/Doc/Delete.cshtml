@@ -1,0 +1,56 @@
+﻿@model Doc
+
+<form method="post" asp-action="Delete"> 
+
+	<br /><br />
+	<input asp-for="Id" hidden />
+
+	<div class="border" p-3 mt-4>
+		<div class="row pb-2">
+			<h2 class="text-primary">Delete</h2>
+			<hr />
+		</div>
+
+		@*<div  asp-validation-summary="All"></div>*@
+
+		<div class="mb-3">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" disabled class="form-control" />
+			
+		</div>
+		<div class="mb-3">
+			<label asp-for="Url"></label>
+			<input asp-for="Url" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Tittle"></label>
+			<input asp-for="Tittle" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Description"></label>
+			<input asp-for="Description" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Section"></label>
+			<input asp-for="Section" disabled class="form-control" />
+		</div>
+		@*<div class="mb-3">
+			<label asp-for="CreateDateTime"></label>
+			<input asp-for="CreateDateTime" class="form-control" />
+			<span asp-validation-for="CreateDateTime" class="text-danger"></span>
+		</div>*@
+
+		<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+		<a asp-controller="Doc" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@*@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}*@
+}
+
+
