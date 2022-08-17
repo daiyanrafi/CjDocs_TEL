@@ -12,11 +12,11 @@
                     $(document).ready(function() {
                         var datas =  @Html.Raw(Accessor.HttpContext.Session.GetString("_Menu"));
                         $.each(datas, function(index, data) {
-                            var item = "<li class='nav-item'><a class='nav-link' href='"+data.Url+"'> " +data.Name+ "</a></li>"
+                            var item = "<li class='nav-item'><a class='nav-link' href='/Doc/Details/"+data.Id+"'> " +data.Name+ "</a></li>"
                             $(".main-menu").append(item);
 
                         });
-
+                         ////<a asp-action="Edit" asp-route-id="Model?.Id">Edit</a>
                     });
               </script>
             <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
