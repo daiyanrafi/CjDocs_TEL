@@ -28,11 +28,11 @@
 			<input asp-for="Tittle" class="form-control" />
 			<span asp-validation-for="Tittle" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		@*<div class="mb-3">
 			<label asp-for="Description"></label>
 			<input asp-for="Description" class="form-control" />
 			<span asp-validation-for="Description" class="text-danger"></span>
-		</div>
+		</div>*@
 		<div class="mb-3">
 			<label asp-for="Section"></label>
 			<input asp-for="Section" class="form-control" />
@@ -43,6 +43,33 @@
 			<input asp-for="CreateDateTime" class="form-control" />
 			<span asp-validation-for="CreateDateTime" class="text-danger"></span>
 		</div>*@
+
+
+
+
+<link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
+
+<div>
+	<label asp-for="Description"></label>
+
+    <form action="EditorPage" method="POST">
+
+        <textarea name="content" id="myEditor"><</textarea>
+    <button class="btn btn-secondary">Submit</button>
+
+    </form>
+
+    <script>
+var editor = new FroalaEditor('#myEditor', {
+    //toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
+});
+    </script>
+
+</div>
+
+
+
 
 		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
 		<a asp-controller="Doc" asp-action="Index" class="btn btn-secondary" style="width:150px">
