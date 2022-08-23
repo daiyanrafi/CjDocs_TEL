@@ -1,8 +1,7 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using office.Models
+@model BlogBody
+
+
 
 <link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
@@ -11,8 +10,8 @@
 <div>
 
     <form action="EditorPage" method="POST">
-
-        <textarea name="content" id="myEditor"><</textarea>
+        <input asp-action="Id" />
+        <textarea asp-for=Content id="myEditor"><</textarea>
     <button class="btn btn-secondary">Submit</button>
 
     </form>

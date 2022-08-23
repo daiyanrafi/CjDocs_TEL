@@ -30,15 +30,6 @@ public class DocController : Controller
     public IActionResult Create(Doc obj)
     {
 
-        //Two tab can not be same
-
-
-        //if (obj.Name == obj.Section.ToString())
-        //{
-        //    ModelState.AddModelError("Name", "The Name & Section can not be same.");
-        //}
-
-
         if (ModelState.IsValid)
         {
             _db.Docs.Add(obj);

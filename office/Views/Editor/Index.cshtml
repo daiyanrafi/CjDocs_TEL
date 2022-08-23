@@ -1,13 +1,20 @@
-﻿@model List<string>
+﻿@using office.Models
+
+@model List<BlogBody>
 
 	<div>
 
-		@foreach(string post in @Model)
+		@foreach(BlogBody post in @Model)
 		{
 			<div class="card">
 				<div class="card-body">
-				@Html.Raw(@post)
+				@Html.Raw(@post.Content)
 				</div>
+
+				<div class="card-footer">
+					@Html.ActionLink("Edit", "EditorPage", new {Id= @post.Id})
+				</div>
+
 			</div>
 		}
 	</div>
