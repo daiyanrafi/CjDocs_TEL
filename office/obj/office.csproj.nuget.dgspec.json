@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.NET Project\\Z. Projects\\off\\office_new\\office\\office.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\Offic\\office_new\\office\\office.csproj": {}
   },
   "projects": {
-    "E:\\.NET Project\\Z. Projects\\off\\office_new\\office\\office.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\Offic\\office_new\\office\\office.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.NET Project\\Z. Projects\\off\\office_new\\office\\office.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Offic\\office_new\\office\\office.csproj",
         "projectName": "office",
-        "projectPath": "E:\\.NET Project\\Z. Projects\\off\\office_new\\office\\office.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\.NET Project\\Z. Projects\\off\\office_new\\office\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\Offic\\office_new\\office\\office.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\Offic\\office_new\\office\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\.NET Project\\Tools, SDK, Component\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

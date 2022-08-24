@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using office.Data;
 using office.Models;
+using System.Linq;
 
 namespace office.Controllers;
 
@@ -11,11 +12,14 @@ public class DocController : Controller
     {
         _db = db;
     }
+
+   
     public IActionResult Index ()
     {
         IEnumerable<Doc> objDocList = _db.Docs;
         return View(objDocList);
     }
+    //create section
 
     //GET
     public IActionResult Create()
@@ -29,6 +33,15 @@ public class DocController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Create(Doc obj)
     {
+        //{
+        //    //if (obj != obj.Empty)
+        //    //{
+        //        BlogBody existingEntry = _db.Docs.FirstOrDefault(x => x.Id == id);
+
+        //        return View(model: existingEntry);
+        //    //}
+
+        //}
 
         if (ModelState.IsValid)
         {

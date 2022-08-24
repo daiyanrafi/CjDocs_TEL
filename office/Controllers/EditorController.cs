@@ -6,7 +6,7 @@ namespace office.Controllers
 {
     public class EditorController : Controller
     {
-
+        //save in browser
         static List<BlogBody> Posts = new List<BlogBody>();
         public IActionResult Index()
         {

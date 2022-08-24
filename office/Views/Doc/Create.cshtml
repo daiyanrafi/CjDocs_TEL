@@ -1,7 +1,9 @@
 ﻿@model Doc
+
 @{
     ViewData["Title"] = "Create";
 }
+
 <form method="post"> 
 
 	<br /><br />
@@ -29,10 +31,24 @@
 			<span asp-validation-for="Tittle" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
+			<link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
 			<label asp-for="Description"></label>
-			<input asp-for="Description" class="form-control" />
-			<span asp-validation-for="Description" class="text-danger"></span>
+			<textarea asp-for="Description" rows="5" cols="40" class="form-control" id="myEditor"></textarea>
+						<span asp-validation-for="Description" class="text-danger"></span>
+
+			    <script>
+		var editor = new FroalaEditor('#myEditor', {
+    toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
+});
+    </script>
 		</div>
+
+		
+
+
+
+
 		<div class="mb-3">
 			<label asp-for="Section"></label>
 			<input asp-for="Section" class="form-control" />
@@ -44,29 +60,7 @@
 			<span asp-validation-for="CreateDateTime" class="text-danger"></span>
 		</div>*@
 
-@*
 
-
-<link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
-
-<div>
-	<label asp-for="Description"></label>
-
-    <form action="EditorPage" method="POST">
-
-        <textarea name="content" id="myEditor"><</textarea>
-    <button class="btn btn-secondary">Submit</button>
-
-    </form>
-
-    <script>
-var editor = new FroalaEditor('#myEditor', {
-    //toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
-});
-    </script>
-
-</div>*@
 
 
 

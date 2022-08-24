@@ -7,6 +7,8 @@
 <script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
 
 
+<h5 class="mb-4">Create post</h5>
+
 <div>
 
     <form action="EditorPage" method="POST">
@@ -17,8 +19,8 @@
     </form>
 
     <script>
-var editor = new FroalaEditor('#myEditor', {
-    //toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
+        var editor = new FroalaEditor('#myEditor', {
+    toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
 });
     </script>
 
