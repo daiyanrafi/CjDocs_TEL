@@ -19,7 +19,7 @@
     <br /><br />
 
 
-<table class="table table-brered table-striped" style="width:10%">
+<table class="table table-brered table-striped" style="width:100%">
     <thead>
         <tr>
             <th>
@@ -52,10 +52,10 @@
         @foreach(var obj in Model)
         {
             <tr>
-                <td width="02%">
+                <td width="10%">
                     @obj.Id
                 </td>
-                <td width="04%">
+                <td width="20%">
                     @obj.Name
                 </td>
 @*                <td width="05%">
@@ -64,13 +64,13 @@
                 <td width="05%">
                     @obj.Description
                 </td>*@
-                 <td width="05%">
+                 <td width="30%">
                     @obj.Tittle
                 </td>
-                <td width="01%">
+                <td width="10%">
                     @obj.Section
                 </td>
-                <td width="10%">
+                <td width="20%">
                     @obj.CreateDateTime
                 </td>
 
@@ -80,7 +80,7 @@
                         class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i> Edit</a>
 
                         <a asp-controller="Doc" asp-action="Details" asp-route-id="@obj.Id"
-                        class="btn btn-primary mx-2"> <i class="bi bi-binoculars"></i> Details</a>
+                        class="btn btn-info mx-2"> <i class="bi bi-binoculars"></i> Details</a>
                   
                         <a asp-controller="Doc" asp-action="Delete" asp-route-id="@obj.Id"
                         class="btn btn-danger mx-2"> <i class="bi bi-trash3-fill"></i> Delete</a>

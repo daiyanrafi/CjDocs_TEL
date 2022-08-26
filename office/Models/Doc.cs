@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace office.Models
 {
@@ -13,7 +14,7 @@ namespace office.Models
         public String Description { get; set; }
         [Range(1, 10, ErrorMessage = "Section must be between 1 and 10 only!!")]
         public String Section { get; set; }
-
+        [DisplayName("Created Date & Time")]
         public DateTime CreateDateTime { get; set; } = DateTime.Now;
     }
 }

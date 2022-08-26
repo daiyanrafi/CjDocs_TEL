@@ -4,16 +4,15 @@
     ViewData["Title"] = "Create";
 }
 
+
 <form method="post"> 
 
 	<br /><br />
-	<div class="border" p-3 mt-4>
+	<div class="mb-3" p-3 mt-4>
 		<div class="row pb-2">
 			<h2 class="text-primary">Create Doc</h2>
 			<hr />
 		</div>
-
-		@*<div  asp-validation-summary="All"></div>*@
 
 		<div class="mb-3">
 			<label asp-for="Name"></label>
@@ -30,6 +29,12 @@
 			<input asp-for="Tittle" class="form-control" />
 			<span asp-validation-for="Tittle" class="text-danger"></span>
 		</div>
+			<div class="mb-3">
+			<label asp-for="Section"></label>
+			<input asp-for="Section" class="form-control" />
+			<span asp-validation-for="Section" class="text-danger"></span>
+		</div>
+
 		<div class="mb-3">
 			<link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
@@ -37,34 +42,14 @@
 			<textarea asp-for="Description" rows="5" cols="40" class="form-control" id="myEditor"></textarea>
 						<span asp-validation-for="Description" class="text-danger"></span>
 
-			    <script>
-		var editor = new FroalaEditor('#myEditor', {
+		<script>
+			var editor = new FroalaEditor('#myEditor', {
     toolbarButtons:   [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
 });
-    </script>
+		</script>
 		</div>
 
-		
-
-
-
-
-		<div class="mb-3">
-			<label asp-for="Section"></label>
-			<input asp-for="Section" class="form-control" />
-			<span asp-validation-for="Section" class="text-danger"></span>
-		</div>
-		@*<div class="mb-3">
-			<label asp-for="CreateDateTime"></label>
-			<input asp-for="CreateDateTime" class="form-control" />
-			<span asp-validation-for="CreateDateTime" class="text-danger"></span>
-		</div>*@
-
-
-
-
-
-
+	
 		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
 		<a asp-controller="Doc" asp-action="Index" class="btn btn-secondary" style="width:150px">
 			Back to List
@@ -73,6 +58,3 @@
 </form>
 
 		<partial name="_ValidationScriptsPartial" />
-
-
-

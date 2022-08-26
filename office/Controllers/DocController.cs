@@ -33,15 +33,6 @@ public class DocController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Create(Doc obj)
     {
-        //{
-        //    //if (obj != obj.Empty)
-        //    //{
-        //        BlogBody existingEntry = _db.Docs.FirstOrDefault(x => x.Id == id);
-
-        //        return View(model: existingEntry);
-        //    //}
-
-        //}
 
         if (ModelState.IsValid)
         {
@@ -63,8 +54,6 @@ public class DocController : Controller
             return NotFound();
         }
         var DocFromDb= _db.Docs.Find(id);
-        //var DocFromFirst = _db.Docs.FirstOrDefault(x => x.Id==id);
-        //var DocFromSingle = _db.Docs.SingleOrDefault(x => x.Id == id);
 
         if (DocFromDb==null)
         {
@@ -79,16 +68,6 @@ public class DocController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Edit(Doc obj)
     {
-
-        //Two tab can not be same
-
-
-        //if (obj.Name == obj.Section.ToString())
-        //{
-        //    ModelState.AddModelError("Name", "The Name & Section can not be same.");
-        //}
-
-
         if (ModelState.IsValid)
         {
             _db.Docs.Update(obj);
@@ -110,8 +89,6 @@ public class DocController : Controller
             return NotFound();
         }
         var DocFromDb = _db.Docs.Find(id);
-        //var DocFromFirst = _db.Docs.FirstOrDefault(x => x.Id==id);
-        //var DocFromSingle = _db.Docs.SingleOrDefault(x => x.Id == id);
 
         if (DocFromDb == null)
         {
@@ -152,8 +129,6 @@ public class DocController : Controller
             return NotFound();
         }
         var DocFromDb = _db.Docs.Find(id);
-        //var DocFromFirst = _db.Docs.FirstOrDefault(x => x.Id==id);
-        //var DocFromSingle = _db.Docs.SingleOrDefault(x => x.Id == id);
 
         if (DocFromDb == null)
         {
